@@ -39,7 +39,6 @@ public class CreateUserTests {
     public void Users_GetUsers_Success(){
 
         GoRestService.getUser(id)
-                .prettyPeek()
                 .then()
                 .statusCode(SC_OK)
                 .body("data.id",equalTo(id));
